@@ -40,7 +40,7 @@ a{
 			ul{
 				list-style: none;
 				display:inline-block;
-				padding:20px;
+				padding:20px 0;
 
 			}
 			li{
@@ -54,51 +54,65 @@ a{
 			display:none;
 			position:absolute;
 			right:0px;
+			top: 0px;
+			background:#472424;
+			z-index: 99;
 			vertical-align: bottom;
 			@include breakpoint(phablet){
 				display:inline-block;
 			}
 			.bascket{
-				display:inline-block;
-				margin-right:10px;
+				display: inline-block;
+				margin-right: 10px;
 				&__items{
-					color:#dcc5b8;
+					color: #dcc5b8;
 				}
 			}
 		}
 
 	}
 	.header_bottom{
-		position:relative;
-		padding-top:30px;
+		position: relative;
+		padding-top: 30px;
 		.logo{
-			display:inline-block;
-			margin-right:300px;
-			margin-bottom:30px;
+			display: inline-block;
+			margin-right: 220px;
+			margin-bottom: 30px;
 		}
-		background:#603131;
-		color:#fff;
+		background: #603131;
+		color: #fff;
 		.nav{
 			display:none;
 			@include breakpoint(phablet){
-				display:inline-block;
+				display: inline-block;
+				position: absolute;
+				right: 0;
+				bottom: 0;
 			}
 			ul{
-				list-style:none;
-				display:block;
-				text-align:center;		}
+				list-style: none;
+				display: block;
+				text-align: center;		}
 			li{
 				display:inline-block;
 			}
 			a{			
-				display:block;
-				padding:0 30px;
+				display: block;
+				padding: 0 20px;
 				margin-bottom: 10px;
 				padding-bottom: 30px;
 				border-bottom: 2px solid transparent;
 				@include breakpoint(phablet){
-					display:inline-block;
-					margin-bottom:0;
+					display: inline-block;
+					font-size:12px;
+					margin-bottom: 0;
+					padding: 0 7px;
+					padding-bottom: 30px;
+				}
+				@include breakpoint(tablet){
+					padding: 0 20px;
+					font-size: 13px;
+					padding-bottom: 30px;
 				}
 			}
 			a:hover{
@@ -115,7 +129,7 @@ a{
 .bars{
 	position: absolute;
 	right:30px;
-	top:30px;
+	top:0px;
 	width:25px;
 	@include breakpoint(phablet){
 		display: none;
@@ -153,6 +167,9 @@ a{
 		background-position: -550px -14px;
 	}
 	&_user{
+		position:absolute;
+		right: 30px;
+		top: 15px;
 		height: 25px;
 		width: 21px;
 		background-position: -587px -14px;
