@@ -92,11 +92,11 @@ a{
 			ul{
 				list-style: none;
 				display: block;
-				text-align: center;		}
+				text-align: center;}
 			li{
 				display:inline-block;
 			}
-			a{			
+			a{
 				display: block;
 				padding: 0 20px;
 				margin-bottom: 10px;
@@ -375,6 +375,7 @@ a{
 					margin: 20px 0;
 					a{
 						color: white;
+						&:hover{color:#ff7373;}
 					}
 					&.hide{visibility: hidden;}
 
@@ -396,6 +397,10 @@ a{
 				height: 30px;
 				width: 30px;
 				background-image:url(/images/social-icons.png);
+			}
+			a:hover{
+				opacity: .5;
+				
 			}
 			.icon__{
 				&twitter{background-position: -15px 0;}
