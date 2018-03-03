@@ -56,6 +56,34 @@ html
 			.promo
 				img(src="")
 		br
+		.wrapper
+			.news
+				h1 LATEST NEWS
+				.row.clearfix
+					.col-mobileonly-1-1.col-phablet-1-3.relative
+						img(src='/images/news_01.png')
+						.news__info
+							.news__date DEC 27, 2017
+							.news__text Lorem ipsum dolor sit amet consectetur adipiscing
+							.news__comments 24 Comments
+					.col-mobileonly-1-1.col-phablet-1-3.relative
+						img(src='/images/news_02.png')
+						.news__info
+							.news__date DEC 27, 2017
+							.news__text Lorem ipsum dolor sit amet consectetur adipiscing
+							.news__comments 24 Comments
+					.col-mobileonly-1-1.col-phablet-1-3.relative
+						img(src='/images/news_03.png')
+						.news__info
+							.news__date DEC 27, 2017
+							.news__text Lorem ipsum dolor sit amet consectetur adipiscing
+							.news__comments 24 Comments
+		.help
+			.wrapper.for-help
+				h2 Looking for help?
+				div Have any questions or need help with order? Let us know!
+				.btn
+					a MAKE AN INQUIRY
 		.footer
 			.wrapper
 				ul.advantages
@@ -75,10 +103,12 @@ html
 					ul.contacts
 						li
 							.contacts__title.phone Call Us
-								.contacts__text 0 (1234) 567 890
+								.contacts__text
+									a(href='tel:0-1234-567-890') 0 (1234) 567 890
 						li
 							.contacts__title.envelope Email Us
-								.contacts__text hello@sportshold.com
+								.contacts__text
+									a(href='mailto:hello@sportshold.com') hello@sportshold.com
 						li
 							.contacts__title.address Address
 
