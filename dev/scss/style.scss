@@ -169,3 +169,245 @@ a{
 		}
 	}
 }
+.chevron{
+	&::before {
+		border-style: solid;
+		border-color: #e56868;
+		border-width: 0.25em 0.25em 0 0;
+		content: '';
+		display: inline-block;
+		height: 0.45em;
+		left: 0.4em;
+		position: relative;
+		top: 0.15em;
+		transform: rotate(-45deg);
+		vertical-align: top;
+		width: 0.45em;
+	
+	}
+	&.bottom:before {
+		top: 0;
+		transform: rotate(135deg);
+	}
+
+}
+	
+.footer{
+	background-color: #623232;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	padding-top: 45px;
+	
+
+	ul{list-style: none;}
+	.advantages{
+		list-style: none;
+		@include breakpoint(mobileonly){
+			padding-left: 50px;
+		}
+		
+		padding: 50px 0 45px 0;
+		@include breakpoint(phablet){
+			li{
+				display: inline-block;
+				max-width: 160px;
+				text-align: center;
+				margin-bottom: 60px;
+			}
+		}
+		
+		&__text{
+			display: inline-block;
+			position: relative;
+			padding: 20px 0;
+			@include breakpoint(mobileonly){
+				width: 180px;
+				text-align: left;
+			}
+			
+			
+			&.icons{
+				&:before{
+					content: '';
+					display: inline-block;
+					width: 50px;
+					height: 50px;
+					position: absolute;
+					background-image: url(/images/icons.png);
+					top: 10px;
+					left: -55px;
+					@include breakpoint(phablet){
+						top: -50px;
+						left: 55px;
+					}
+					
+				}
+				&.icon__{
+					&shipping{
+						&:before{background-position: 0px 0px;}
+
+					}
+					&guarantee{
+						&:before{background-position: -55px 0px}
+
+					}
+					&support{
+						&:before{background-position:-106px -6px;}
+
+					}
+					&prices{
+						&:before{background-position:-160px -6px;}
+
+					}
+					&exclusive{
+						&:before{background-position:-218px -6px;}
+
+					}
+					&delivery{
+						&:before{background-position:-276px -6px;}
+
+					}
+				}
+			}
+			
+			
+		}
+	}
+	.maine-info{
+		padding: 90px 0 0 60px;
+		border-bottom: 2px solid #795151;
+		border-top: 2px solid #795151;
+		.contacts{
+			@include breakpoint(phablet){
+				display: inline-block;
+				position: relative;
+				top: -10px;
+				margin-right: 40px;
+			}
+			li{
+				margin-bottom: 30px;
+
+			}
+			&__icons{
+
+
+			}
+			&__title{
+				display: inline-block;
+				position: relative;
+				color: #e56868;
+				text-transform: uppercase;
+				max-width: 170px;
+				text-align: left;
+				padding-left: -10px;
+				&.phone{
+					min-width: 170px;
+					&:before{
+						background-position:-333px 0px;
+
+					}
+				}
+				&.envelope{
+					&:before{background-position:-404px 0px}
+				}
+				&.address{
+					&:before{background-position:-476px 0px;}
+				}
+				&:before{
+					content: "";
+					position: absolute;
+					display: inline-block;
+					width: 55px;
+					height: 55px;
+					background-image: url(/images/icons.png);
+					left:-65px;
+					top: 0;
+				}
+			}
+			&__text{
+				color: white;
+				text-transform: none;
+				padding: 10px 0;
+			}
+		}
+		.title{
+			color: #e56868;
+			text-transform: uppercase;
+			margin: 40px 0;
+			cursor: pointer;
+			@include breakpoint(mobileonly){margin-left: -60px;}
+			@include breakpoint(phablet){
+				display: inline-block;
+				margin:0 0 40px 0;
+				text-align: left;
+				li{
+					min-width: 160px;
+
+					
+				}
+			}
+			ul{
+				color: white;
+				text-transform: none;
+				@include breakpoint(mobileonly){
+					display: none;
+				}
+
+				li{
+					margin: 20px 0;
+					a{
+						color: white;
+					}
+					&.hide{visibility: hidden;}
+
+				}
+			}
+		}
+		
+	}
+	
+	.bottom-line{
+		padding: 40px 0;
+		.logo{
+			float: left;
+		}
+		.rights{ margin: 20px;}
+		.social-icons{
+			a>*{
+				display: inline-block;
+				height: 30px;
+				width: 30px;
+				background-image:url(/images/social-icons.png);
+			}
+			.icon__{
+				&twitter{background-position: -15px 0;}
+				&facebook{background-position: -51px 0;}
+				&media{background-position: -85px 0;}
+				&youtub{
+					background-position: -132px 0;
+					margin-left: 10px;
+				}
+			}
+		}
+		@include breakpoint(mobileonly){
+			.logo{
+				float: none;
+			}
+		}
+		@include breakpoint(phablet){
+			.rights{
+				display: block;
+			}
+			.logo{
+				display: block;
+				text-align: left;
+				float: none;
+			}
+			.social-icons{
+				float: right;
+				margin-top: -80px;
+			}
+		}
+	}
+}

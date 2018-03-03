@@ -8,4 +8,10 @@ $(function(){
 			{duration:300}
 		);
 	})
+	
+	//footer
+	$(".footer .title").click(function(){
+		$(this).children().slideToggle(500);
+	
+	});
 })

@@ -55,8 +55,8 @@ gulp.task('images', function() {
     .pipe(gulp.dest('./app/images/'))
 });
 gulp.task('fonts', function() {
-    gulp.src('./dev/fonts/*')
-    .pipe(watch('./dev/fonts/*'))
+    gulp.src('./dev/fonts/**/*')
+    .pipe(watch('./dev/fonts/**/*'))
     .pipe(plumber())
     .pipe(gulp.dest('./app/fonts/'))
 });
