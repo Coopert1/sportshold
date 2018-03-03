@@ -23,15 +23,16 @@
 }
 
 .wrapper{
+		position: relative;
 		margin: 0 auto;
 		max-width: 1200px;
 		padding: 0 10px;
-	@include breakpoint(phablet){
-		max-width: 700px;
-	}
-	@include breakpoint(tablet){
-		max-width: 1200px;
-	}
+	// @include breakpoint(phablet){
+	// 	max-width: 700px;
+	// }
+	// @include breakpoint(tablet){
+	// 	max-width: 1200px;
+	// }
 }
 
 .clearfix{
