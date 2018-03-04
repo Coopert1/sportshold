@@ -218,7 +218,61 @@ img{max-width: 100%;}
 	}
 }
 .pull-right{float: right;}
-
+.brands{
+	padding: 80px 0;
+	text-align: center;
+	li{
+		display: inline-block;
+		margin: 20px;
+	}
+}
+.reviews{
+	text-align: center;
+	background-color:#623232;
+	
+	background-image: url(../images/testimonials.png);
+	background-position: center;
+	padding: 100px 0;
+	color: white;
+	&__box{
+		display: inline-block;
+		margin-right: 50px;
+		opacity: .7;
+		&:hover{
+			opacity: 1;
+//			.reviews__text{
+//				display: block;
+//			}
+		}
+	}
+	&__foto{
+		width: 60px;
+		height: 60px;
+		border-radius: 30px;
+		background-image: url(../images/man.png);
+		display: inline-block;
+	}
+	&__text{
+		max-width: 1100px;
+		padding: 40px;
+		background-color: #5a3a3a;
+		margin-top: 50px;
+		position: relative;
+		display: none;
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 28px;
+			height: 28px;
+			transform: rotate(45deg);
+			position: absolute;
+			left: 48%;
+			background-color: #5a3a3a;
+			top: -10px;
+		}
+	}
+	
+}
 .news{
 	padding: 105px 0 100px 0;
 	text-align: center;
