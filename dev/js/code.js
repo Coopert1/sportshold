@@ -15,6 +15,8 @@ $(function(){
 	
 	});
 	//end for footer
+
+	
 	$('span.icon.icon_user').click(function(){
 		$(this).toggleClass('active');
 		$(".header__user_menu").fadeIn(500)

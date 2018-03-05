@@ -36,7 +36,16 @@ body{
 		max-width:100%;
 	}
 }
-
+a{
+	text-decoration:none;
+}
+h1{
+	font-size: 1.9em;
+	text-transform: uppercase;
+	color: #623232;
+}
+img{max-width: 100%;}
+.relative{position: relative;}
 .header{
 	font-size:13px;
 	color:#fff;
@@ -303,29 +312,174 @@ body{
 		}
 	}
 }
-.chevron{
-	&::before {
-		border-style: solid;
-		border-color: #e56868;
-		border-width: 0.25em 0.25em 0 0;
-		content: '';
-		display: inline-block;
-		height: 0.45em;
-		left: 0.4em;
-		position: relative;
-		top: 0.15em;
-		transform: rotate(-45deg);
-		vertical-align: top;
-		width: 0.45em;
-	
-	}
-	&.bottom:before {
-		top: 0;
-		transform: rotate(135deg);
-	}
+@include breakpoint(mobileonly){
+	.chevron{
+		&::before {
+			border-style: solid;
+			border-color: #e56868;
+			border-width: 0.25em 0.25em 0 0;
+			content: '';
+			display: inline-block;
+			height: 0.45em;
+			left: 0.4em;
+			position: relative;
+			top: 0.15em;
+			transform: rotate(-45deg);
+			vertical-align: top;
+			width: 0.45em;
 
+		}
+		&.bottom:before {
+			top: 0;
+			transform: rotate(135deg);
+		}
+
+	}
 }
+.pull-right{float: right;}
+.brands{
+	padding: 80px 0;
+	text-align: center;
+	li{
+		display: inline-block;
+		margin: 20px;
+	}
+}
+.reviews{
+	text-align: center;
+	background-color:#623232;
 	
+	background-image: url(../images/testimonials.png);
+	background-position: center;
+	padding: 100px 0;
+	color: white;
+	&__box{
+		display: inline-block;
+		margin-right: 50px;
+		opacity: .7;
+		&:hover{
+			opacity: 1;
+//			.reviews__text{
+//				display: block;
+//			}
+		}
+	}
+	&__foto{
+		width: 60px;
+		height: 60px;
+		border-radius: 30px;
+		background-image: url(../images/man.png);
+		display: inline-block;
+	}
+	&__text{
+		max-width: 1100px;
+		padding: 40px;
+		background-color: #5a3a3a;
+		margin-top: 50px;
+		position: relative;
+		display: none;
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 28px;
+			height: 28px;
+			transform: rotate(45deg);
+			position: absolute;
+			left: 48%;
+			background-color: #5a3a3a;
+			top: -10px;
+		}
+	}
+	
+}
+.news{
+	padding: 105px 0 100px 0;
+	text-align: center;
+	color: white;
+	h1{margin-bottom: 50px;}
+	&__info{
+		position: absolute;
+		bottom: 25px;
+		text-align: left;
+		padding-left: 20px;
+		padding-right: 20px;
+		line-height: 30px;
+		.news__comments{
+			color: #ff7373;
+			margin-right: -2px
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				position: relative;
+				background-image:  url(../images/icon_comments.png);
+				top: 4px;
+				left: -2px;
+			}
+		}
+		@include breakpoint(mobileonly){
+			
+		}
+	}
+}
+
+.help{
+	background-color: #ff7373;
+	padding: 100px 0;
+	color: white;
+
+	@include breakpoint(mobileonly){
+		text-align: center;
+		div{
+			max-width: 295px;
+		}
+		h2{
+			text-align: center;
+			&:before{
+				left: 40%;
+				top: -50px;
+			}
+		}
+		.btn{
+			margin-top: 20px;
+		}
+	}
+	@include breakpoint(phablet){
+		padding: 100px 0 100px 0;
+		.for-help{padding-left: 120px;}
+		h2{
+			text-align: left;
+			&:before{
+				left: -80px;
+				top: 20px;
+			}
+		}
+		.btn{
+			margin-top: -50px;
+			float: right;
+		}
+		
+	}
+	
+	
+	h2{
+		font-size: 30px;
+		text-transform: uppercase;
+		position: relative;
+		margin-bottom: 20px;
+		&:before{
+			content: '';
+			height: 45px;
+			width: 65px;
+			display: inline-block;
+			background-image: url(../images/envelope.png);
+			position: absolute;
+			
+		}
+	}
+	
+}
 .footer{
 	background-color: #623232;
 	text-align: center;
@@ -421,6 +575,11 @@ body{
 			}
 			li{
 				margin-bottom: 30px;
+				a{color: white;
+					&:hover{
+						color:#ff7373;
+					}
+				}
 
 			}
 			&__icons{
@@ -477,10 +636,12 @@ body{
 				text-align: left;
 				li{
 					min-width: 160px;
+					
 
 					
 				}
 			}
+			
 			ul{
 				color: white;
 				text-transform: none;
