@@ -485,21 +485,14 @@ img{max-width: 100%;}
 		line-height: 30px;
 		.news__comments{
 			color: #ff7373;
-			margin-right: -2px
-			&:before{
-				content: '';
-				display: inline-block;
-				width: 20px;
-				height: 20px;
-				position: relative;
-				background-image:  url(../images/icon_comments.png);
-				top: 4px;
-				left: -2px;
-			}
+			margin-right: -2px;
+			display:inline-block;
+			
 		}
 		@include breakpoint(mobileonly){
 			
 		}
+		img{margin-bottom: -6px;}
 	}
 }
 
