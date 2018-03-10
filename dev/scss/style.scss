@@ -276,8 +276,6 @@ img{max-width: 100%;}
 
 
 .colection-nike{
-	background: #000;
-	height: auto;
 	text-align:center;
 	position:relative;
 	vertical-align:top;
@@ -311,8 +309,6 @@ img{max-width: 100%;}
 			// position: absolute;
 			// top: 0;
 			// left: 0;
-			width:100%;
-			height: auto;
 		}
 	}
 
@@ -618,9 +614,11 @@ img{max-width: 100%;}
 		padding-right: 20px;
 		line-height: 30px;
 		.news__comments{
-			color: #ff7373;
-			margin-right: -2px;
-			display:inline-block;
+			a{
+				color: #ff7373;
+				margin-right: -2px;
+				display:inline-block;
+			}
 			
 		}
 		@include breakpoint(mobileonly){
@@ -923,5 +921,12 @@ img{max-width: 100%;}
 }
 .ma-minus{
 	margin-left: -10px; 
+}
+.article{
+	margin-bottom:20px;
+	a{
+		color: #fff;
+		text-decoration:none;
+	}
 }
 
