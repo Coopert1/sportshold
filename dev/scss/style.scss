@@ -147,11 +147,48 @@ img{max-width: 100%;}
 	}
 }
 .promo{
+		padding:0 10px 30px 10px;
+		margin-bottom: 50px;
 		background:#f0efee;
+		@include breakpoint(tablet){
+			padding: 0;
+		}
 	&__pic{
 		position: relative;
 		top: -29px;
+		left: -20px;
 		margin-bottom: -29px;
+	}
+	&__text{
+		margin-top: 60px;
+		@include breakpoint(tablet){
+			margin-top: 30px;
+			transform: scale(0.8);
+		}
+		@include breakpoint(laptop){
+			margin-top: 60px;
+			transform: scale(1);
+		}
+		
+		&__price{
+			font-size: 30px;
+			color:#623232;
+		}
+		&__name{
+			font-size: 50px;
+			font-family: 'TruenoBd';
+			color:#623232;
+		}
+		&__variants{
+			font-family: 'TruenoBd';
+			color:#ff7373;
+			font-size: 30px;
+		}
+		&__description{
+			color: #8a8784;
+			font-size: 13px;
+			margin-bottom: 30px;
+		}
 	}
 
 	}
@@ -214,11 +251,108 @@ img{max-width: 100%;}
 			background:#ff7373;
 		}
 	}
+	&_buy{
+		background:#ff7373;
+		color:#fff;
+		padding:10px 35px;
+	}
+	&_collection{
+		position: absolute;
+		bottom: 10%;
+		left:50%;
+		margin-left: -104px;
+		padding: 20px 30px;
+		color: #fff;
+		background: #4bd8cd;
+		text-transform: uppercase;
+	}
+	&_arrivals{
+		background: #623232;
+		padding: 20px 30px;
+		color: #fff;
+	}
 
+}
+
+
+.colection-nike{
+	background: #000;
+	height: auto;
+	text-align:center;
+	position:relative;
+	vertical-align:top;
+	margin-bottom:30px;
+	background: #000;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	&__text{
+		position:relative;
+		z-index:2;
+		display:inline-block;
+		// vertical-align:bottom;
+		img{
+			display:inline-block;
+			transform:translateY(-50px);
+		}
+		span:nth-child(2){
+			color: #fff;
+			font-size: 30px;
+			display: block;
+		}
+		span:nth-child(3){
+			color: #4bd8cd;
+			font-size: 30px;
+			text-transform: uppercase;
+		}
+	}
+	&__pic{
+		img{
+			z-index:0;
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			width:100%;
+			height: auto;
+		}
+	}
+
+}
+.new-arivals{
+	position: relative;
+    padding: 40px 30px;
+    padding-left:105px;
+	background: #ff7373;
+	margin-bottom: 30px;
+	&__pic{
+		img{
+			max-height: 110%;
+			position: absolute;
+			bottom: 0px;
+			left: -20px;
+		}
+	}
+	&__text{
+		position:relative;
+		z-index:2;
+		text-align:center;
+		span{
+			&:nth-child(1){
+				font-size: 25px;
+				color: #fff;
+				display: block;
+			}
+			&:nth-child(2){
+				font-size: 25px;
+				display: block;
+				color: #fff;
+				text-transform: uppercase;
+				margin-bottom: 35px;
+			}
+		}
+	}
 }
 .catalog{
 	color:#bdb9b5;
-
 	text-align: center;
 	&__category{
 		display: inline-block;
@@ -244,7 +378,7 @@ img{max-width: 100%;}
 	padding:25px;
 	border: 1px solid #e0dfde;
 	line-height: 26px;
-	margin-bottom:20px;
+	margin-bottom:30px;
 	&__price{
 		font-size:24px;
 		color: #8a8784;
@@ -711,3 +845,7 @@ img{max-width: 100%;}
 		}
 	}
 }
+.ma-minus{
+	margin-left: -10px; 
+}
+

@@ -1,6 +1,7 @@
 $(function(){
+	SameHeight();
 
-	//burger bittons and menu
+	//burger buttons and menu
 	$('.bars').click(function(){
 		$(this).toggleClass('active');
 		$(".nav").animate(
@@ -26,6 +27,22 @@ $(function(){
 			$(".header__nav").css("opacity",1)
 		})
 	});
+		function SameHeight() {
+		var browserMinWidth = $(window).width()
+			if (browserMinWidth > 600) {
+				$('.colection-nike').css('height', $('.col2').height());
+			}
+			// else{
+			// 	$('.colection-nike').css('height',400);
+			// }
+		}
+		$(window).resize(function(){
+			SameHeight();
+		});
+
+
+
+
 });
 
 
