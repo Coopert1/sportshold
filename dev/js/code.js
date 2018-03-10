@@ -12,7 +12,9 @@ $(function(){
 	
 	// for footer
 	$(".footer .title").click(function(){
+		$(this).toggleClass("bottom")
 		$(this).children().slideToggle(500);
+	
 	
 	});
 	//end for footer
@@ -32,17 +34,42 @@ $(function(){
 			if (browserMinWidth > 600) {
 				$('.colection-nike').css('height', $('.col2').height());
 			}
-			// else{
-			// 	$('.colection-nike').css('height',400);
-			// }
 		}
 		$(window).resize(function(){
 			SameHeight();
 		});
-
-
-
-
+	
+	//slider reviews
+	var ReviewsSlider=$('#ReviewsSlider').lightSlider({
+		item: 3,
+		controls:false,
+		slideMove:1,
+		responsive:[
+			{
+				breakpoint: 600,
+				settings:{
+					item:1,
+					slideMove:1,
+				}
+			}
+		],
+	})
+	$(".ls-prevSlide").click(function(){
+		ReviewsSlider.goToPrevSlide();
+		$(".wrapper>.reviews__text").removeClass("show");
+	});
+	$(".ls-nextSlide").click(function(){
+		ReviewsSlider.goToNextSlide();
+		$(".wrapper>.reviews__text").removeClass("show");
+	});
+	
+	$(".reviews__box").click(function(){
+		$(".wrapper>.reviews__text").toggleClass("show");
+		var value = $(this).children(".reviews__text").text();
+		//console.log()
+		$(".wrapper>.reviews__text").text(value);
+		
+	});
 });
 
 
