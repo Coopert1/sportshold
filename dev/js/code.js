@@ -63,7 +63,10 @@ $(function(){
 		$(".wrapper>.reviews__text").removeClass("show");
 	});
 	
-	$(".reviews__box").click(function(){
+	$(".reviews__box").click(function(e){
+		var width = $(window).width();
+		
+		
 		$(".wrapper>.reviews__text").toggleClass("show");
 		var value = $(this).children(".reviews__text").text();
 		//console.log()

@@ -632,10 +632,11 @@ img{max-width: 100%;}
 	background-color: #ff7373;
 	padding: 100px 0;
 	color: white;
+	
 
 	@include breakpoint(mobileonly){
 		text-align: center;
-		div{
+		.text{
 			max-width: 295px;
 		}
 		h2{
@@ -663,7 +664,11 @@ img{max-width: 100%;}
 			margin-top: -50px;
 			float: right;
 		}
+		.text{max-width: 250px;}
 		
+	}
+	@include breakpoint(tablet){
+		.text{max-width: none;}
 	}
 	
 	
