@@ -494,7 +494,7 @@ img{max-width: 100%;}
 	.ls-prevSlide{
 		content: '';
 		display: inline-block;
-		top:60%;
+		top:60px;
 		left:20px;
 		font-size: 3em;
 		cursor: pointer;
@@ -510,7 +510,7 @@ img{max-width: 100%;}
 	.ls-nextSlide{
 		content: '';
 		display: inline-block;
-		top:60%;
+		top:60px;
 		right:20px;
 		font-size: 3em;
 		cursor: pointer;
@@ -545,18 +545,46 @@ img{max-width: 100%;}
 		margin-top: 50px;
 		position: relative;
 		display: none;
-		&:before{
-			content: '';
-			display: inline-block;
-			width: 28px;
-			height: 28px;
-			transform: rotate(45deg);
-			position: absolute;
-			left: 48%;
-			background-color: #5a3a3a;
-			top: -10px;
+		
+		&.show{
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				transform: rotate(45deg);
+				position: absolute;
+				left: 48%;
+				background-color: #5a3a3a;
+				top: -10px;
+			}
 		}
-		&.show{display: block}
+		&.show-left{
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				transform: rotate(45deg);
+				position: absolute;
+				left: 15%;
+				background-color: #5a3a3a;
+				top: -10px;
+			}
+		}
+		&.show-right{
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				transform: rotate(45deg);
+				position: absolute;
+				left: 85%;
+				background-color: #5a3a3a;
+				top: -10px;
+			}
+		}
 		
 	}
 	&__rating{
