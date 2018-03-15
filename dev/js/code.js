@@ -56,20 +56,63 @@ $(function(){
 	})
 	$(".ls-prevSlide").click(function(){
 		ReviewsSlider.goToPrevSlide();
-		$(".wrapper>.reviews__text").removeClass("show");
+		if($(".wrapper>.reviews__text").css('display') == 'block') $(".wrapper>.reviews__text").slideToggle(500);
+		
+		
 	});
 	$(".ls-nextSlide").click(function(){
 		ReviewsSlider.goToNextSlide();
-		$(".wrapper>.reviews__text").removeClass("show");
-	});
-	
-	$(".reviews__box").click(function(){
-		$(".wrapper>.reviews__text").toggleClass("show");
-		var value = $(this).children(".reviews__text").text();
-		//console.log()
-		$(".wrapper>.reviews__text").text(value);
+	 	if($(".wrapper>.reviews__text").css('display') == 'block') $(".wrapper>.reviews__text").slideToggle(500);
 		
 	});
+	
+	var put_value = function (value, self){
+		
+		$(".wrapper>.reviews__text").text(value);
+		console.dir(self);
+		return self;
+	};
+	var value, self;
+	$(".reviews__box").click(function(e){
+		var width = $(window).width();
+		var position_click = event.pageX;
+		var part =100*position_click/width;
+		self = $(this);
+		var elem = $(".wrapper>.reviews__text");
+		if ($(this).hasClass('active')){
+			$(".wrapper>.reviews__text").slideUp(500);
+			$(".reviews__box").removeClass('active');
+		}
+		else{
+			$(".reviews__box").removeClass('active');
+			$(this).addClass('active');
+			if($(elem).css('display') == 'none'){
+			$(".wrapper>.reviews__text").slideDown(500);
+			}
+		}
+		// if($(elem).css('display') == 'none'){
+		// 	$(".wrapper>.reviews__text").slideDown(500);
+		// 	self.addClass('active');
+		// }
+		// else{
+		// 	$(".wrapper>.reviews__text").slideUp(500);
+		// }
+		
+		if(part < 33) {
+			elem.removeClass("show show-right").addClass("show-left");}
+		else if(part < 66){
+			elem.removeClass("show-left show-right").addClass("show");}
+		else {
+			elem.removeClass("show-left show").addClass("show-right");}
+		
+		value = $(this).children(".reviews__text").text();
+	
+		put_value(value,self);
+		
+	});
+	// $(".reviews__box").next().click(function(e){
+	// 	alert(1);
+	// });
 });
 
 

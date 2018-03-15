@@ -255,23 +255,29 @@ html
 			.brands
 				ul
 					li
-						img(src="images/adidas.png")
+						a(href="#")
+							img(src="images/adidas.png")
 					li
-						img(src="images/nike.png")
+						a(href="#")
+							img(src="images/nike.png")
 					li
-						img(src="images/puma.png")
+						a(href="#")
+							img(src="images/puma.png")
 					li
-						img(src="images/asics.png")
+						a(href="#")
+							img(src="images/asics.png")
 					li
-						img(src="images/nb.png")
+						a(href="#")
+							img(src="images/nb.png")
 					li
-						img(src="images/fila.png")
+						a(href="#")
+							img(src="images/fila.png")
 		.reviews
 			.wrapper
 				.ls-prevSlide
-					i.fa.fa-arrow-circle-o-left
+					i.fa.fa-arrow-left
 				.ls-nextSlide
-					i.fa.fa-arrow-circle-o-right
+					i.fa.fa-arrow-right
 				ul#ReviewsSlider
 					li
 						.reviews__box
@@ -315,7 +321,7 @@ html
 							.reviews__rating
 								.client.client-6
 							.reviews__text “6Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"
-				.reviews__text “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+				.reviews__text.show “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
 				
 
 		.wrapper
@@ -371,9 +377,9 @@ html
 		.help
 			.wrapper.for-help
 				h2 Looking for help?
-				div Have any questions or need help with order? Let us know!
-				.btn
-					a MAKE AN INQUIRY
+				.text Have any questions or need help with order? Let us know!
+				a(href="#").btn.btn_arrivals
+					|MAKE AN INQUIRY
 		.footer
 			.wrapper
 				ul.advantages
