@@ -79,10 +79,25 @@ $(function(){
 		var part =100*position_click/width;
 		self = $(this);
 		var elem = $(".wrapper>.reviews__text");
-		if($(elem).css('display') == 'none') $(".wrapper>.reviews__text").slideToggle(500);
-		console.log(event.pageX);
-		console.log(width);
-		console.log(part);
+		if ($(this).hasClass('active')){
+			$(".wrapper>.reviews__text").slideUp(500);
+			$(".reviews__box").removeClass('active');
+		}
+		else{
+			$(".reviews__box").removeClass('active');
+			$(this).addClass('active');
+			if($(elem).css('display') == 'none'){
+			$(".wrapper>.reviews__text").slideDown(500);
+			}
+		}
+		// if($(elem).css('display') == 'none'){
+		// 	$(".wrapper>.reviews__text").slideDown(500);
+		// 	self.addClass('active');
+		// }
+		// else{
+		// 	$(".wrapper>.reviews__text").slideUp(500);
+		// }
+		
 		if(part < 33) {
 			elem.removeClass("show show-right").addClass("show-left");}
 		else if(part < 66){
@@ -95,6 +110,9 @@ $(function(){
 		put_value(value,self);
 		
 	});
+	// $(".reviews__box").next().click(function(e){
+	// 	alert(1);
+	// });
 });
 
 
