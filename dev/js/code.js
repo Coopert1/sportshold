@@ -1,6 +1,5 @@
 $(function(){
 	SameHeight();
-
 	//burger buttons and menu
 	$('.bars').click(function(){
 		$(this).toggleClass('active');
@@ -12,10 +11,15 @@ $(function(){
 	
 	// for footer
 	$(".footer .title").click(function(){
-		$(this).toggleClass("bottom")
-		$(this).children().slideToggle(500);
-	
-	
+		var browserMinWidth = $(window).width()
+		if(browserMinWidth < 600){
+			$(this).children().slideToggle(500);
+			$(this).toggleClass('active');
+		}
+		else{
+			$(this).children().show();
+			$('.footer .title"').onclick=null;
+		}
 	});
 	//end for footer
 
@@ -37,6 +41,10 @@ $(function(){
 		}
 		$(window).resize(function(){
 			SameHeight();
+			var browserMinWidth = $(window).width()
+			if(browserMinWidth > 600){
+				$('.footer .title').children().show();
+		}
 		});
 	
 	//slider reviews
@@ -114,5 +122,9 @@ $(function(){
 	// 	alert(1);
 	// });
 });
+// $( window ).load(function() {
+// 	SameHeight();
+// });
+
 
 
